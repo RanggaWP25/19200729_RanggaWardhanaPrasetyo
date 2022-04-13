@@ -65,6 +65,32 @@
             <?= "<a class='nav-link pb-0' href=$datang><i class='fa-solid fa-people-group'></i><span> Kategori Anggota</span></a></a>" ?>
         <?php } ?>
     </li>
+
+    <?php
+    $pinjam = base_url('pinjam');
+    $dafbok = base_url('pinjam/daftarBooking');
+    if ($this->session->userdata('role_id') == 1) {
+    ?>
+        <?=
+        "<div class='sidebar-heading mt-3'>
+        Transaksi
+    </div>
+    <li class='nav-item acitve'>
+    <li class='nav-item'>
+        <a class='nav-link pb-0' href=$pinjam>
+            <i class='fa fa-fw fa-shopping-cart'></i>
+            <span>Data Peminjaman</span>
+        </a>
+    </li>
+    <li class='nav-item'>
+        <a class='nav-link pb-0' href=$dafbok>
+            <i class='fa fa-fw fa-list'></i>
+            <span>Data Booking</span>
+        </a>
+    </li>
+    </li>"
+        ?>
+    <?php } ?>
     <!-- Divider -->
     <hr class="sidebar-divider mt-3">
     <!-- Sidebar Toggler (Sidebar) -->
