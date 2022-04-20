@@ -69,6 +69,9 @@
     <?php
     $pinjam = base_url('pinjam');
     $dafbok = base_url('pinjam/daftarBooking');
+    $lapbuk = base_url('laporan/laporan_buku');
+    $lapang = base_url('laporan/laporan_anggota');
+    $lapin  = base_url('laporan/laporan_pinjam');
     if ($this->session->userdata('role_id') == 1) {
     ?>
         <?=
@@ -88,7 +91,31 @@
             <span>Data Booking</span>
         </a>
     </li>
+    </li>
+    <div class='sidebar-heading mt-3'>
+        Laporan
+    </div>
+    <li class='nav-item acitve'>
+    <li class='nav-item'>
+        <a class='nav-link pb-0' href=$lapbuk>
+            <i class='fa fa-fw fa-address-book'></i>
+            <span>Laporan Data Buku</span>
+        </a>
+    </li>
+    <li class='nav-item'>
+        <a class='nav-link pb-0' href=$lapang>
+            <i class='fa fa-fw fa-address-book'></i>
+            <span>Laporan Data Anggota</span>
+        </a>
+    </li>
+    <li class='nav-item'>
+        <a class='nav-link pb-0' href=$lapin>
+            <i class='fa fa-fw fa-address-book'></i>
+            <span>Laporan Data Peminjaman</span>
+        </a>
+    </li>
     </li>"
+
         ?>
     <?php } ?>
     <!-- Divider -->
